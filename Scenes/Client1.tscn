@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Client.gd" type="Script" id=1]
+[ext_resource path="res://cursor.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="CursorGhost" type="Sprite" parent="."]
+self_modulate = Color( 0.423529, 0.388235, 0.388235, 1 )
+position = Vector2( 200, 200 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CursorGhost"]
+margin_left = 23.0
+margin_top = 8.0
+margin_right = 176.0
+margin_bottom = 22.0
+text = "Server simulation result"
+
+[node name="Cursor" type="Sprite" parent="."]
+position = Vector2( 329, 104 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Cursor"]
+margin_left = 24.0
+margin_top = -21.0
+margin_right = 99.0
+margin_bottom = -7.0
+text = "Client Input"
